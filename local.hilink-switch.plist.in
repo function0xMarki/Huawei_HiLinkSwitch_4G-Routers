@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>local.hilink-switch</string>
+	<!-- install.sh puts the program path first -->
+	<key>ProgramArguments</key>
+	<array>
+		<string>--launchd</string>
+	</array>
+	<!-- In case the router is already plugged in at login -->
+	<key>RunAtLoad</key>
+	<true/>
+	<!-- launchd starts the program when the router shows up in CD-ROM mode -->
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.iokit.matching</key>
+		<dict>
+			<key>huawei-1f01</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOUSBHostDevice</string>
+				<key>idVendor</key>
+				<integer>4817</integer>
+				<key>idProduct</key>
+				<integer>7937</integer>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+			</dict>
+			<key>huawei-1f02</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOUSBHostDevice</string>
+				<key>idVendor</key>
+				<integer>4817</integer>
+				<key>idProduct</key>
+				<integer>7938</integer>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+			</dict>
+			<key>huawei-157d</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOUSBHostDevice</string>
+				<key>idVendor</key>
+				<integer>4817</integer>
+				<key>idProduct</key>
+				<integer>5501</integer>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+			</dict>
+			<key>huawei-158b</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOUSBHostDevice</string>
+				<key>idVendor</key>
+				<integer>4817</integer>
+				<key>idProduct</key>
+				<integer>5515</integer>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>ProcessType</key>
+	<string>Background</string>
+	<!-- 077: the log is created readable only by its owner -->
+	<key>Umask</key>
+	<integer>63</integer>
+	<!-- install.sh adds StandardErrorPath with the log path -->
+</dict>
+</plist>
