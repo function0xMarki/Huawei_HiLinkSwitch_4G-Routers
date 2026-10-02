@@ -110,7 +110,13 @@ at <http://192.168.8.1>.
 
 - **Nothing happens when plugging it in.** Check that the background item
   is allowed in System Settings → General → Login Items, then run the
-  program by hand (see above) and read what it says.
+  program by hand (see above) and read what it says. If the Mac does not
+  see the router at all (check with the `system_profiler` command above),
+  see the next point.
+- **The router keeps disappearing, or the Mac stops seeing it.** Plug it
+  straight into the Mac, or into a hub with its own power supply. On 4G these
+  routers draw a lot of current, and a bus-powered hub can drop out under
+  that load, taking the router with it.
 - **"not switching: a volume is still mounted".** A file on the router's
   memory card is open. Close it or eject the card in Finder, then plug the
   router in again. The program never forces the card out, to avoid losing

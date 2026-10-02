@@ -111,7 +111,13 @@ suele estar en <http://192.168.8.1>.
 
 - **No pasa nada al enchufarlo.** Comprueba que el ítem en segundo plano
   está permitido en Ajustes del Sistema → General → Ítems de inicio; después
-  lanza el programa a mano (ver arriba) y lee lo que dice.
+  lanza el programa a mano (ver arriba) y lee lo que dice. Si el Mac no ve
+  el router en absoluto (compruébalo con el comando `system_profiler` de
+  arriba), mira el punto siguiente.
+- **El router desaparece una y otra vez, o el Mac deja de verlo.** Conéctalo
+  directo al Mac o a un hub con alimentación propia. En 4G estos routers
+  consumen bastante corriente, y un hub sin alimentación puede caerse con esa
+  carga y llevarse el router con él.
 - **«not switching: a volume is still mounted».** Hay un fichero abierto en
   la tarjeta de memoria del router. Ciérralo o expulsa la tarjeta en el
   Finder, y vuelve a enchufar el router. El programa nunca expulsa la
